@@ -18,7 +18,7 @@ class DnCNN:
         self.sess.run(tf.global_variables_initializer())
 
     def train(self):
-        filepath = "C://Users//gmt//Desktop//BWD//"
+        filepath = "./TrainingSet//"
         filenames = os.listdir(filepath)
         saver = tf.train.Saver()
         for epoch in range(50):
@@ -32,12 +32,12 @@ class DnCNN:
                     [loss, denoised_img] = self.sess.run([self.loss, self.denoised_img], feed_dict={self.clean_img: cleaned_batch, self.noised_img: noised_batch, self.train_phase: False})
                     print("Epoch: %d, Step: %d, Loss: %g"%(epoch, i, loss))
                     compared = np.concatenate((cleaned_batch[0, :, :, 0], noised_batch[0, :, :, 0], denoised_img[0, :, :, 0]), 1)
-                    Image.fromarray(np.uint8(compared)).save("./save_denoise_process//"+str(epoch)+"_"+str(i)+".jpg")
+                    Image.fromarray(np.uint8(compared)).save("./TrainingResults//"+str(epoch)+"_"+str(i)+".jpg")
                 if i % 500 == 0:
                     saver.save(self.sess, "./save_para//DnCNN.ckpt")
             np.random.shuffle(filenames)
 
-    def test(self, cleaned_path="C://Users//gmt//Desktop//Set12//02.png"):
+    def test(self, cleaned_path="./TestingSet//02.png"):
         cleaned_img = np.reshape(np.array(Image.open(cleaned_path)), [1, 256, 256, 1])
         noised_img = cleaned_img + np.random.normal(0, SIGMA, cleaned_img.shape)
         [denoised_img] = self.sess.run([self.denoised_img], feed_dict={self.clean_img: cleaned_img, self.noised_img: noised_img, self.train_phase: False})
