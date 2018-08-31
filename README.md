@@ -21,6 +21,8 @@ Examples of TrainingSet
 
 ====================
 ## Results of the code
+Training about 1 epoch
+
 |Raw|Noised|Denoised|
 |-|-|-|
 |![](https://github.com/MingtaoGuo/DnCNN-TensorFlow/blob/master/TestingSet/01.png)|![](https://github.com/MingtaoGuo/DnCNN-TensorFlow/blob/master/IMAGES/noised1.jpg)|![](https://github.com/MingtaoGuo/DnCNN-TensorFlow/blob/master/IMAGES/denoised1.jpg)|
