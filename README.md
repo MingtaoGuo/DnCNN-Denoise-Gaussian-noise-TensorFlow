@@ -1,10 +1,10 @@
 # DnCNN-TensorFlow
 Simple implementation of the paper (DnCNN)'Beyond a Gaussian Denoiser: Residual Learning of Deep CNN for Image Denoising'
 ## Introduction
-This code just simplely implement the paper [Beyond a Gaussian Denoiser: Residual Learning of Deep CNN for Image Denoising](http://cn.arxiv.org/pdf/1608.03981), there are some details of the code are different from the paper.
+This code just simplely implement the paper [Beyond a Gaussian Denoiser: Residual Learning of Deep CNN for Image Denoising](http://cn.arxiv.org/pdf/1608.03981), but there are some details of the code are different from the paper.
 ![](https://github.com/MingtaoGuo/DnCNN-TensorFlow/blob/master/IMAGES/method.jpg)
 ## DataSets
-
+The datasets include 400 gray images, but i have croped them into 40x40 patches. the croped datasets can be downloaded from my [BaiduYun](https://pan.baidu.com/s/1Uiq29K2WLvOyeGlnRu8j_A) 
 ## Python packages
 ====================
 1. python3.5
