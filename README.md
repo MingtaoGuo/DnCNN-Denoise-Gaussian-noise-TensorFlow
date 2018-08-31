@@ -5,6 +5,12 @@ This code just simplely implement the paper [Beyond a Gaussian Denoiser: Residua
 ![](https://github.com/MingtaoGuo/DnCNN-TensorFlow/blob/master/IMAGES/method.jpg)
 ## DataSets
 The datasets include 400 gray images, but i have croped them into 40x40 patches. the croped datasets can be downloaded from my [BaiduYun](https://pan.baidu.com/s/1Uiq29K2WLvOyeGlnRu8j_A) 
+
+Examples of TrainingSet
+
+|||||||||
+|-|-|-|-|-|-|-|-|
+|![](https://github.com/MingtaoGuo/DnCNN-TensorFlow/blob/master/TrainingSet/1_17.jpg)|![](https://github.com/MingtaoGuo/DnCNN-TensorFlow/blob/master/TrainingSet/1_18.jpg)|![](https://github.com/MingtaoGuo/DnCNN-TensorFlow/blob/master/TrainingSet/1_19.jpg)|![](https://github.com/MingtaoGuo/DnCNN-TensorFlow/blob/master/TrainingSet/1_20.jpg)|![](https://github.com/MingtaoGuo/DnCNN-TensorFlow/blob/master/TrainingSet/1_25.jpg)|![](https://github.com/MingtaoGuo/DnCNN-TensorFlow/blob/master/TrainingSet/1_26.jpg)|![](https://github.com/MingtaoGuo/DnCNN-TensorFlow/blob/master/TrainingSet/1_27.jpg)|![](https://github.com/MingtaoGuo/DnCNN-TensorFlow/blob/master/TrainingSet/1_28.jpg)|
 ## Python packages
 ====================
 1. python3.5
