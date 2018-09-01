@@ -21,7 +21,7 @@ Examples of TrainingSet
 
 ====================
 ## Results of the code
-Training about 1 epoch
+Trained about 1 epoch
 
 |Raw|Noised|Denoised|
 |-|-|-|
