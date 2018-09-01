@@ -38,7 +38,7 @@ class DnCNN:
             np.random.shuffle(filenames)
 
     def test(self, cleaned_path="./TestingSet//02.png"):
-        cleaned_img = np.reshape(np.array(Image.open(cleaned_path)), [1, 256, 256, 1])
+        cleaned_img = np.reshape(np.array(misc.imresize(np.array(Image.open(cleaned_path)), [256, 256])), [1, 256, 256, 1])
         noised_img = cleaned_img + np.random.normal(0, SIGMA, cleaned_img.shape)
         [denoised_img] = self.sess.run([self.denoised_img], feed_dict={self.clean_img: cleaned_img, self.noised_img: noised_img, self.train_phase: False})
         compared = np.concatenate((cleaned_img[0, :, :, 0], noised_img[0, :, :, 0], denoised_img[0, :, :, 0]), 1)
