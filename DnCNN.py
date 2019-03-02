@@ -38,6 +38,8 @@ class DnCNN:
             np.random.shuffle(filenames)
 
     def test(self, cleaned_path="./TestingSet//02.png"):
+        saver = tf.train.Saver()
+        saver.restore(self.sess, "./save_para/DnCNN.ckpt")
         cleaned_img = np.reshape(np.array(misc.imresize(np.array(Image.open(cleaned_path)), [256, 256])), [1, 256, 256, 1])
         noised_img = cleaned_img + np.random.normal(0, SIGMA, cleaned_img.shape)
         [denoised_img] = self.sess.run([self.denoised_img], feed_dict={self.clean_img: cleaned_img, self.noised_img: noised_img, self.train_phase: False})
